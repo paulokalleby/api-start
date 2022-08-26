@@ -1,0 +1,551 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2022-08-26T22:56:31.801Z",
+    "__export_source": "insomnia.desktop.app:v2021.7.2",
+    "resources": [
+        {
+            "_id": "req_a51edd058e16420185ce544991dbbb70",
+            "parentId": "fld_d8b47603cb6c402381b6ce296d722219",
+            "modified": 1661554418671,
+            "created": 1661541864383,
+            "url": "{{ _.url }}/auth/register",
+            "name": "Register",
+            "description": "Registrar-se\n\nPOST : {{ _.url }}/auth/register\n\nBody : \"name\", \"email\", \"password\", \"device\"",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"name\" : \"Paulo Kalleby\",\n\t\"email\" : \"paulo.devweb@gmail.com\",\n\t\"password\" : \"password\",\n\t\"device\" : \"http-insomnia\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_7600d65c3f4f45058cae6bac37a7a80f"
+                },
+                {
+                    "id": "pair_2989ac4348264ad18b13a9fea00dbe8a",
+                    "name": "Accept",
+                    "value": "application/json",
+                    "description": ""
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "1|zWBYzXHIN6BBck6YiPdmKilhUFRCwnhUCE5kF8WS"
+            },
+            "metaSortKey": -1649600602044,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_d8b47603cb6c402381b6ce296d722219",
+            "parentId": "wrk_78c3fea570e4438d9ed581cd1f326dcf",
+            "modified": 1661554513141,
+            "created": 1661541864380,
+            "name": "Auth",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1661541966646,
+            "_type": "request_group"
+        },
+        {
+            "_id": "wrk_78c3fea570e4438d9ed581cd1f326dcf",
+            "parentId": null,
+            "modified": 1661541864361,
+            "created": 1661541864361,
+            "name": "API Start Laravel 9",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_38daf21e4520451a977e8d57af351560",
+            "parentId": "fld_d8b47603cb6c402381b6ce296d722219",
+            "modified": 1661554461146,
+            "created": 1661541864395,
+            "url": "{{ _.url }}/auth/forgot-password",
+            "name": "ForgotPassword",
+            "description": "Solicitar Alteração de Senha:\n\nPOST : {{ _.url }}/auth/forgot-password\n\nBody: \"email\"",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"email\" : \"paulo.devweb@gmail.com\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_7600d65c3f4f45058cae6bac37a7a80f"
+                },
+                {
+                    "id": "pair_2989ac4348264ad18b13a9fea00dbe8a",
+                    "name": "Accept",
+                    "value": "application/json",
+                    "description": ""
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1649569598778,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_a8df4a9c95de4fe1a8ecfc4abab8ccd0",
+            "parentId": "fld_d8b47603cb6c402381b6ce296d722219",
+            "modified": 1661554431744,
+            "created": 1661541864398,
+            "url": "{{ _.url }}/auth/reset-password",
+            "name": "ResetPassword",
+            "description": "Redefinir Senha:\n\nPOST : {{ _.url }}/auth/reset-password\n\nBody: \"token\", \"email\" , \"password\"",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"token\" : \"46e677721dc730b90aa0ef453f0e6d242b252dde5b76d4f109d626a99600e649\",\n\t\"email\" : \"paulo.devweb@gmail.com\",\n\t\"password\" : \"password\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_7600d65c3f4f45058cae6bac37a7a80f"
+                },
+                {
+                    "id": "pair_2989ac4348264ad18b13a9fea00dbe8a",
+                    "name": "Accept",
+                    "value": "application/json",
+                    "description": ""
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1649554097145,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_b582bfa3d4c9470b888418b61c6201db",
+            "parentId": "fld_d8b47603cb6c402381b6ce296d722219",
+            "modified": 1661541864387,
+            "created": 1661541864387,
+            "url": "{{ _.url }}/auth/login",
+            "name": "Login",
+            "description": "Autenticar\n\nPOST : {{ _.url }}/auth/login\n\nBody : \"email\", \"password\", \"device\"",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"email\" : \"paulo.devweb@gmail.com\",\n\t\"password\" : \"password\",\n\t\"device\" : \"http-insomnia\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_fb0c5502932045a3babee376d442556c",
+                    "name": "Accept",
+                    "value": "application/json",
+                    "description": ""
+                },
+                {
+                    "id": "pair_225086926ff24cf199bf992a583ad143",
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1649538595512,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_25f7033897ca48e683c48292fcad2426",
+            "parentId": "fld_d8b47603cb6c402381b6ce296d722219",
+            "modified": 1661554476064,
+            "created": 1661541864402,
+            "url": "{{ _.url }}/auth/logout",
+            "name": "Logout",
+            "description": "Deslogar\n\nPOST : {{ _.url }}/auth/logout\n\nToken : \"Bearer\"",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": ""
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_7600d65c3f4f45058cae6bac37a7a80f"
+                },
+                {
+                    "id": "pair_2989ac4348264ad18b13a9fea00dbe8a",
+                    "name": "Accept",
+                    "value": "application/json",
+                    "description": ""
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1649523093879,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_43b06626eddd4e43941108f75af1e68d",
+            "parentId": "fld_d8b47603cb6c402381b6ce296d722219",
+            "modified": 1661554496830,
+            "created": 1661541864391,
+            "url": "{{ _.url }}/auth/me",
+            "name": "Me",
+            "description": "Perfil do usuário\n\nGET : {{ _.url }}/auth/me\n\nToken : \"Bearer\" ",
+            "method": "GET",
+            "body": {
+                "mimeType": "application/json",
+                "text": ""
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_7600d65c3f4f45058cae6bac37a7a80f"
+                },
+                {
+                    "id": "pair_2989ac4348264ad18b13a9fea00dbe8a",
+                    "name": "Accept",
+                    "value": "application/json",
+                    "description": ""
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1649507592246,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_ee14cbbb546d4c4aa23081aaccbb007c",
+            "parentId": "fld_14fca1d127564a0c80d0320052b04ecf",
+            "modified": 1661554415046,
+            "created": 1661541864422,
+            "url": "{{ _.url }}/users/64a2e702-2e91-42a3-a1ea-8f5b58ed6f43",
+            "name": "UsersDelete",
+            "description": "Excluir Usuário:\n\nDELETE : {{ _.url }}/users/{uuid}\n\nToken : \"Bearer\"\n\nPermission : \"users-manage\"",
+            "method": "DELETE",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_ab7ed8f77e074977930ed39899cbe8e8",
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                },
+                {
+                    "id": "pair_378a0579a18f44b295a077dfb374e9ee",
+                    "name": "Accept",
+                    "value": "application/json",
+                    "description": ""
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1651197288849,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_14fca1d127564a0c80d0320052b04ecf",
+            "parentId": "wrk_78c3fea570e4438d9ed581cd1f326dcf",
+            "modified": 1661554509644,
+            "created": 1661541864406,
+            "name": "Users",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1661541966596,
+            "_type": "request_group"
+        },
+        {
+            "_id": "req_b4e66d5d5db0465297b9da5a75f8d4ef",
+            "parentId": "fld_14fca1d127564a0c80d0320052b04ecf",
+            "modified": 1661554408694,
+            "created": 1661541864408,
+            "url": "{{ _.url }}/users",
+            "name": "UsersIndex",
+            "description": "Listar Usuários:\n\nGET : {{ _.url }}/users\n\nQuery : \"name\", \"active\", \"page\"\n\nToken : \"Bearer\"\n\nPermission : \"users-manage\"",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_e1abe7d1233641cab7959467118f7a9c",
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                },
+                {
+                    "id": "pair_303a1d9840434fa6bc98e1740cbd78b0",
+                    "name": "Accept",
+                    "value": "application/json",
+                    "description": ""
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1650383733564,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": true,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": false,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_c0bc4802c793454d95f3f0bb0e4df663",
+            "parentId": "fld_14fca1d127564a0c80d0320052b04ecf",
+            "modified": 1661554401616,
+            "created": 1661541864414,
+            "url": "{{ _.url }}/users/ba9648d5-dac2-45b0-960d-b010765ed490",
+            "name": "UsersShow",
+            "description": "Ver Usuário:\n\nGET : {{ _.url }}/users/{uuid}\n\nToken : \"Bearer\"\n\nPermission : \"users-manage\"",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_e1abe7d1233641cab7959467118f7a9c",
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                },
+                {
+                    "id": "pair_303a1d9840434fa6bc98e1740cbd78b0",
+                    "name": "Accept",
+                    "value": "application/json",
+                    "description": ""
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1650167899123.5,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_c8f52533876d40829f317a2b456a83cc",
+            "parentId": "fld_14fca1d127564a0c80d0320052b04ecf",
+            "modified": 1661554389091,
+            "created": 1661541864417,
+            "url": "{{ _.url }}/users",
+            "name": "UsersStore",
+            "description": "Criar Usuário:\n\nPOST : {{ _.url }}/users\n\nBody : \"name\", \"email\", \"password\", \"active\"\n\nToken : \"Bearer\"\n\nPermission : \"users-manage\"",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"name\" : \"Usuário de Teste\",\n\t\"email\" : \"teste2@teste.com\",\n\t\"password\" : \"password\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_e1abe7d1233641cab7959467118f7a9c",
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                },
+                {
+                    "id": "pair_303a1d9840434fa6bc98e1740cbd78b0",
+                    "name": "Accept",
+                    "value": "application/json",
+                    "description": ""
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1650059981903.25,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_7dd957a473654dce8b4e2bf28e33ad92",
+            "parentId": "fld_14fca1d127564a0c80d0320052b04ecf",
+            "modified": 1661554375002,
+            "created": 1661541864419,
+            "url": "{{ _.url }}/users/f9a565e3-c507-4e78-9f83-56be9661e090",
+            "name": "UsersUpdate",
+            "description": "Editar Usuário:\n\nPUT : {{ _.url }}/users/{uuid}\n\nBody : \"name\", \"email\", \"password\", \"active\"\n\nToken : \"Bearer\"\n\nPermission : \"users-manage\"",
+            "method": "PUT",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"name\" : \"Usuário de Teste\",\n\t\"email\" : \"izabella.koss@example.com\",\n\t\"password\" : \"password\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_e1abe7d1233641cab7959467118f7a9c",
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                },
+                {
+                    "id": "pair_303a1d9840434fa6bc98e1740cbd78b0",
+                    "name": "Accept",
+                    "value": "application/json",
+                    "description": ""
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1650006023293.125,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_90c8e834aef3440183e2cd80df6cabd1",
+            "parentId": "wrk_78c3fea570e4438d9ed581cd1f326dcf",
+            "modified": 1661542373433,
+            "created": 1661541966546,
+            "url": "{{ _.url }}",
+            "name": "Home",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "id": "pair_5266d34b20204e4eb47749c16c708773",
+                    "name": "",
+                    "value": "",
+                    "description": ""
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1661541966546,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "env_985515896fd142119e40ddd97e949440",
+            "parentId": "wrk_78c3fea570e4438d9ed581cd1f326dcf",
+            "modified": 1661542445339,
+            "created": 1661541864364,
+            "name": "Base Environment",
+            "data": {
+                "url": "https://api-start.dev.com",
+                "token": "1|7y3qpGUheT7eXcBwsduAjisZPa17pH0VpqTDtyZO"
+            },
+            "dataPropertyOrder": {
+                "&": [
+                    "url",
+                    "token"
+                ]
+            },
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1649600525632,
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_e0a049a43501430bb7ee4afc52210d8b",
+            "parentId": "wrk_78c3fea570e4438d9ed581cd1f326dcf",
+            "modified": 1661541864372,
+            "created": 1661541864372,
+            "name": "Default Jar",
+            "cookies": [],
+            "_type": "cookie_jar"
+        },
+        {
+            "_id": "spc_9822558637ce4adf81138deee0886137",
+            "parentId": "wrk_78c3fea570e4438d9ed581cd1f326dcf",
+            "modified": 1661541864466,
+            "created": 1661541864376,
+            "fileName": "API Start Laravel 9",
+            "contents": "",
+            "contentType": "yaml",
+            "_type": "api_spec"
+        }
+    ]
+}
