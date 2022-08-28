@@ -6,4 +6,5 @@
 - *Repository (User)*
 - *FormRequest (Login, Register & User)*
 - *JsonResource (User)*
+- *SoftDeletes*
 - *UUID*
